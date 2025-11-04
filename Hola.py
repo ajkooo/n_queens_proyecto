@@ -4,3 +4,5 @@ lista = [s, e, x, o ]
 
 for i in lista:
 print(i)
+
+print("Algebra nos da la vida")
