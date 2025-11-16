@@ -18,6 +18,7 @@ si N==2 o N==3:
   
 si 3 < N <= 20:
   usamos backctracking
+      paso-1_probar fila;    paso-2_verificar;    paso-3_recursion;      paso-4_retroceder
 
 si 20 < N <= 64:
   usamos bitwise; exigimos un tiempo menor a 20 segundos; si no, imprime una solución posible
