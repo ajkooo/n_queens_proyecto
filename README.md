@@ -10,10 +10,13 @@ https://www.youtube.com/watch?v=nsbHNy7yWic   (video yt)
 objetivo: el jugador intrduce el tamaño del tablero. El programa a continuación imprimirá el número de commbinaciones posibles (p.e., siempre que el tiempod de espera sea menor a 20 s) y una solución aleatoria. Se utilizan diferentes métodos en función de la dimensión del tablero:
 
 
-si N <3:
+si N==1:
+  una solucion
+
+si N==2 o N==3:
   error
   
-si N <= 20:
+si 3 < N <= 20:
   usamos backctracking
 
 si 20 < N <= 64:
