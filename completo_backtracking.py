@@ -14,7 +14,6 @@ la diferencia absoluta entre las filas es igual a la diferencia absoluta entre l
 
 def place_queen(row, queens, n):
     if row == n:
-        print(queens)
         return 1
     else:
         total_solutions = 0
