@@ -25,7 +25,12 @@ def place_queen(row, queens, n):
         return total_solutions
 """
 place_queen coloca una reina en cada columna posible de la fila. Si row == n; quiere decir que hemos avanzado más allá de la última
-fila (n-1): la configuración actual de queens es una solción completa 
+fila (n-1): la configuración actual de queens es una solción completa. Si no, evaluara las columnas en la fila prefijada del bucle (la 0),
+hasta colocarla en el primer hueco posible. Cuando esto occure, le sumamos a la fila +1 para avanzar a la siguiende fila (hacemos llamada a la
+función desde un nivel mas bajo). El programa vuelve a evaluar en la fila 1 las posibles soluciones, para pasar luego a la 2. Si al llegar a una
+nueva fila no puede colocar una reina (is_valid), comienza el proceso de backtracking y se cambia la reina de la fila anterior (al no haber cumplido 
+is_valudm row+1 se queda prefijada).
+Funcionamiento del contador: Se le añade 1 solucion si 
 
 """
 
