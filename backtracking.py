@@ -17,4 +17,5 @@ def sepuede(tablero,filas,columnas):
 def probarfila(tablero,filas,n):
     #Vamos a recorrer las columnas para ver si se puede meter una reina 
     for columnas in range(n):
+        print("xd")
 
