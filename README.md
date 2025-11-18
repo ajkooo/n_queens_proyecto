@@ -25,3 +25,8 @@ si 20 < N <= 64:
 
 si N > 64;
   usamos min-conflicts; una solución posible
+
+
+vamoo chavaaleeeeee
+
+
