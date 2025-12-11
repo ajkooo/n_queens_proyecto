@@ -142,3 +142,8 @@ if solution:
     print(f"El tablero tardó {fin2-inicio2} segundos en generarse")
 else:
     print(f"Fallo al encontrar solución para N = {N} dentro del límite de iteraciones, tardó {fin1-inicio1} segundos.")
+
+
+Nn=[100,150,200,300,400,500,1000]
+T=[0.6,1.24,2.49,6.86,15.34,26.78,188]
+It=[162,148,188,290,366,404,682]
