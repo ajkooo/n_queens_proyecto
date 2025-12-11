@@ -6,7 +6,7 @@ import bits
 import min_conflicts
 import matplotlib.pyplot as plt
 
-N = int(input("Bienvienido al juego de las N-Reinas; introduce, a contiuacón, el tamaño del tablero"))
+N = int(input("Bienvienido al juego de las N-Reinas; introduce, a contiuación, el tamaño del tablero"))
 
 if N<=0:
     print("Por favor, introduce un tamaño de tablero positivo")
