@@ -1,7 +1,7 @@
 import backtracking
 import min_conflicts
 import matplotlib1
-import time 
+import time
 
 # Tabla de soluciones totales conocidas para validación rápida (OEIS A000170)
 SOLUCIONES_CONOCIDAS = {
