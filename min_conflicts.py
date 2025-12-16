@@ -43,7 +43,6 @@ def solve_nqueens_min_conflicts(n, max_iterations=5000):
             # Solución encontrada
             return transponer_solucion(board, n)
         
-        current_row = board[col]
         min_conflicts = float('inf')
         best_rows = [] 
 
