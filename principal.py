@@ -4,9 +4,10 @@ import matplotlib1
 import time
 
 # Tabla de soluciones totales conocidas para validación rápida (OEIS A000170)
+# Limitada a N=12 para evitar tiempos de cómputo excesivos en validaciones
 SOLUCIONES_CONOCIDAS = {
     1: 1, 2: 0, 3: 0, 4: 2, 5: 10, 6: 4, 7: 40, 8: 92, 
-    9: 352, 10: 724, 11: 2680, 12: 14200, 13: 73712, 14: 365596, 15: 2279184
+    9: 352, 10: 724, 11: 2680, 12: 14200
 }
 
 def main():
@@ -35,7 +36,7 @@ def main():
             print("La dimensión del tablero ha de ser distinta de 2 o 3 (sin solución).")
             continue
 
-        # --- NUEVA LÓGICA DE SELECCIÓN ---
+        # --- SELECCIÓN DE ALGORITMO ---
         print(f"\nOpciones para N={N}:")
         if N > 20:
             print("(!) Recomendación: Para N > 20 es más eficiente: Min-conflicts.")
@@ -75,8 +76,8 @@ def main():
                 ganador = "Backtracking" if tiempo_b < tiempo_m else "Min-Conflicts"
                 print(f"--> Más rápido: {ganador}")
             continue
-
-        # --- OPCIÓN B: BACKTRACKING (MODIFICADO) ---
+        
+        # --- OPCIÓN B: BACKTRACKING ---
         elif modo == 'b':
             opcion_cant = input("¿Cuántas soluciones? Introduzca un número o 't' para todas: ").lower()
             
@@ -87,17 +88,16 @@ def main():
                 print(f"Calculando TODAS las soluciones posibles para N={N}...")
             else:
                 try:
-                    limite = int(opcion_cant)
-                    # VALIDACIÓN DE LÍMITE (Raise ValueError si excedemos las posibles)
+                    limite = int(opcion_cant)                    # VALIDACIÓN DE LÍMITE (Limitada a N=12)
                     if N in SOLUCIONES_CONOCIDAS:
                         max_posible = SOLUCIONES_CONOCIDAS[N]
                         if limite > max_posible:
-                            # Lanzamos el error explícitamente como pediste
                             raise ValueError(f"Estás pidiendo {limite} soluciones, pero para N={N} solo existen {max_posible}.")
+                    elif limite > 1000:
+                         print(f"(!) Aviso: N={N} no está en la tabla de validación segura (N>12). Puede tardar.")
                             
                 except ValueError as e:
                     print(f"\n[ERROR]: {e}")
-                    # Volvemos al inicio del bucle principal
                     continue 
 
             print(f"Ejecutando Backtracking...")
